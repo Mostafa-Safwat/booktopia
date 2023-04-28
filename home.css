@@ -13,9 +13,9 @@ html {
 
 .picture {
   /* The image used */
-  background-image: url("Assets/pexels-alina-vilchenko-2099266.jpg");
+  background-image: url("Images/pexels-alina-vilchenko-2099266.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url(Assets/pexels-alina-vilchenko-2099266.jpg);
+    url(Images/pexels-alina-vilchenko-2099266.jpg);
   /* Set a specific height */
   min-height: 600px;
 
@@ -27,22 +27,22 @@ html {
 
 @font-face {
   font-family: GrapeNuts;
-  src: url(Assets/Fonts/GrapeNuts-Regular.ttf);
+  src: url(Fonts/GrapeNuts-Regular.ttf);
 }
 
 @font-face {
   font-family: Roboto-Regular;
-  src: url(Assets/Fonts/Roboto-Regular.ttf);
+  src: url(Fonts/Roboto-Regular.ttf);
 }
 
 @font-face {
   font-family: Cardo-Bold;
-  src: url(Assets/Fonts/Cardo-Bold.ttf);
+  src: url(Fonts/Cardo-Bold.ttf);
 }
 
 @font-face {
   font-family: Cardo-Regular;
-  src: url(Assets/Fonts/Cardo-Regular.ttf);
+  src: url(Fonts/Cardo-Regular.ttf);
 }
 
 .quote {
