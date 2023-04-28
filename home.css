@@ -1,0 +1,489 @@
+body,
+html {
+  background-color: #ffca42;
+  height: 100%;
+  margin: unset;
+}
+
+.logo {
+  text-decoration: none;
+  padding-left: 10px;
+  color: #f6f8fc;
+}
+
+.picture {
+  /* The image used */
+  background-image: url("Assets/pexels-alina-vilchenko-2099266.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(Assets/pexels-alina-vilchenko-2099266.jpg);
+  /* Set a specific height */
+  min-height: 600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: GrapeNuts;
+  src: url(Assets/Fonts/GrapeNuts-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(Assets/Fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Cardo-Bold;
+  src: url(Assets/Fonts/Cardo-Bold.ttf);
+}
+
+@font-face {
+  font-family: Cardo-Regular;
+  src: url(Assets/Fonts/Cardo-Regular.ttf);
+}
+
+.quote {
+  color: #f6f8fc;
+  font-size: 29px;
+  font-family: GrapeNuts;
+
+  /* to position the quote */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Reset default list styles */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style navbar */
+.navMenu {
+  height: 50px;
+}
+
+/* Style navbar links */
+.navMenu ul {
+  display: flex;
+  /* justify-content: end; */
+  align-items: center;
+  font-family: Roboto-Regular;
+  font-size: 20px;
+  padding-right: 10%;
+  padding-top: 1%;
+  /* for the future versions */
+  /* background-color: #2D2D34; */
+  padding-bottom: 1%;
+}
+
+.navMenu .nav-item {
+  color: #f6f8fc;
+  text-decoration: none;
+  padding: 40px;
+}
+
+.navMenu .nav-item:hover {
+  color: #ffca42;
+}
+
+.booktopia {
+  padding-left: 10px;
+  padding-right: 45%;
+  color: #f6f8fc;
+  font-size: 40px;
+}
+
+.between {
+  padding-top: 20%;
+  padding-left: 10%;
+}
+
+.btn {
+  all: unset;
+  text-align: center;
+
+  background-color: #ffca42;
+  color: #2d2d34;
+
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+
+  font-size: 18px;
+  font-family: Roboto-Regular;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 15px 0;
+  margin-right: 37px;
+  width: 10%;
+}
+
+.btn:hover {
+  box-shadow: 0 0 11px #2d2d34;
+}
+
+.container1,
+.container2,
+.container3 {
+  display: flex;
+  background-color: #2d2d34;
+  padding-bottom: 25px;   /*===============add== abdalrahman ========*/
+  margin-top: 5%;
+  padding-top: 20px;
+  height: 34%;
+}
+
+.status {
+  color: #ffca42;
+  font-family: Roboto-Regular;
+  font-size: 25px;
+
+  /* to allign the status in the right position */
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+.books {
+  height: 68%;
+}
+
+.space {
+  display: flex;
+  padding-top: 30px;
+  padding-left: 28%;
+}
+
+.details {
+  color: #f6f8fc;
+  font-family: Roboto-Regular;
+}
+
+.pad {
+  padding-top: 5px;
+}
+
+.links {
+  color: #f6f8fc;
+  text-decoration: none;
+}
+
+.links:hover {
+  color: #ffca42;
+}
+
+.date {
+  color: #ffca42;
+  padding-top: 13px;
+  font-size: 15px;
+}
+
+.rating {
+  color: #f6f8fc;
+  float: right;
+  padding: 0 55px 0;
+}
+
+/* ---- start of review ---- */
+.reviewBox {
+  display: grid;
+  place-items: end;
+  height: 80vh;                         /*==================*/
+  padding-top: 25px;            /*=====add abdalrahman========*/
+
+}
+
+/* ---------- Mr Potato ---------- */
+.reviewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: #2d2d34;
+
+  border-radius: 10px;
+
+  width: 220px;
+  height: 220px;
+
+  margin-right: 500px;
+  margin-top: 40px;
+}
+
+.reviewName {
+  display: flex;
+  color: #f6f8fc;
+  font-family: Cardo-Bold;
+
+  margin-left: 74px;
+  padding-top: 5px;
+}
+
+.reviewProfile {
+  height: 35%;
+  border-radius: 100%;
+
+  padding-top: 10px;
+  margin-left: 80px;
+}
+
+.reviewText {
+  font-family: Roboto-Regular;
+  color: #f6f8fc;
+  font-size: 17px;
+
+  padding-left: 35px;
+  padding-top: 10px;
+}
+
+/* ---------- Kartoffel ---------- */
+.reviewContainer2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: #f6f8fc;
+
+  border-radius: 10px;
+
+  width: 220px;
+  height: 220px;
+
+  margin-right: 272px;
+  margin-top: -118px;
+}
+
+.reviewName2 {
+  display: flex;
+  color: #2d2d34;
+  font-family: Cardo-Bold;
+
+  margin-left: 74px;
+  padding-top: 5px;
+}
+
+.reviewProfile2 {
+  height: 35%;
+  border-radius: 100%;
+
+  padding-top: 10px;
+  margin-left: 69px;
+}
+
+.reviewText2 {
+  font-family: Roboto-Regular;
+  color: #2d2d34;
+  font-size: 17px;
+
+  padding-left: 63px;
+  padding-top: 10px;
+}
+
+/* ---------- Jagaimo ---------- */
+.reviewContainer3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: #1b3764;
+
+  border-radius: 10px;
+
+  width: 220px;
+  height: 220px;
+
+  margin-right: 500px;
+  margin-top: -90px;
+  margin-bottom: 100px;
+}
+
+.reviewName3 {
+  display: flex;
+  color: #f6f8fc;
+  font-family: Cardo-Bold;
+
+  margin-left: 74px;
+  padding-top: 5px;
+}
+
+.reviewProfile3 {
+  height: 35%;
+  border-radius: 100%;
+
+  padding-top: 10px;
+  margin-left: 69px;
+}
+
+.reviewText3 {
+  font-family: Roboto-Regular;
+  color: #f6f8fc;
+  font-size: 17px;
+
+  padding-left: 28px;
+  padding-top: 10px;
+}
+
+.MoreText {
+  color: #2d2d34;
+  font-family: Cardo-Regular;
+  font-size: xx-large;
+
+  margin-right: 57%;
+  margin-bottom: -19%;
+  margin-left: 69px;
+}
+/* ---- ! end of review ! ---- */
+
+.endBox {
+  display: flex;
+
+  background-color: #2d2d34;
+
+  height: 37vh;   /*=======================================*/
+}
+
+.endText {
+  color: #f6f8fc;
+  font-size: 42px;
+  font-family: Roboto-Regular;
+  line-height: 2;
+
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.endBtn {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  float: right;
+
+  background-color: #ffca42;
+  color: #2d2d34;
+
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+
+  font-size: 18px;
+  font-family: Roboto-Regular;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 20%;
+
+  margin-top: 31px;
+  margin-right: 111px;
+}
+
+.endBtn:hover {
+  box-shadow: 0 0 11px #ffca42;
+}
+
+.endPic {
+  height: 90%;
+
+  margin-top: 8px;
+  margin-left: 28%;
+}
+/* Start Footer  */
+div.footer{
+  background-color: #ffca42;
+  position: relative;
+
+}
+div.contanier_footer{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.contanier_footer .logo_footer {
+  position: relative;
+}
+span.website-name{
+  color: #F6F8FC;
+  font-size: 25px;
+  padding:0 0 0 7px;
+}
+.contanier_footer .logo_footer .media_icon{
+  position: absolute;
+  width: 200px;
+}
+.facebook,
+.twitter,
+.linkedin,
+.git{
+  padding: 10px;
+}
+.list_one ul li{
+  list-style: none;
+  padding: 5px;
+}
+.list_one ul li span.circle{
+  width: 10px;
+  height: 10px;
+  display: flex;
+  padding: 5px;
+
+}
+.list_one ul li span.circle span{
+  border-style: solid;
+  border-radius: 50%;
+  margin-left: 5px;
+  padding: 1px;
+  border-width: 3px;
+  border-color: #1B3764;    
+}
+.list_one ul li  a{
+  margin: -8px 10px 0;
+  text-decoration: none;
+  color: #1B3764;
+
+}
+.list_two ul li{
+  list-style: none;
+  padding: 5px;
+}
+.list_two ul li span.circle{
+  width: 10px;
+  height: 10px;
+  display: flex;
+  padding: 5px;
+
+}
+.list_two ul li span.circle span{
+  border-style: solid;
+  border-radius: 50%;
+  margin-left: 5px;
+  padding: 1px;
+  border-width: 3px;
+  border-color: #1B3764;    
+}
+.footer4{
+  color: #1B3764;
+  font-size: 15px;
+}
+.footer4 p{
+  margin: 0;
+}
+.list_two ul li  a{
+  margin: -8px 10px 0;
+  text-decoration: none;
+  color: #1B3764;
+
+}
+span.line_footer hr {
+  width: 60%;
+  background-color: #2d2d34;
+  border: none;
+  height: 2px;
+}
+footer{
+  text-align: center;
+  color: #1B3764;
+}
+/* End Footer  */
+

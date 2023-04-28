@@ -1,0 +1,348 @@
+/* Start Variables */
+
+/* End Variables */
+
+/* Start Global Rule */
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+.all_page{
+    /* padding-left: 15px;
+    padding-right:15px ;
+    margin-left: auto;
+    margin-right:auto ; */
+}
+
+/* Small
+@media (min-width: 768px) {
+    .all_page{
+        width: 750px;
+    }
+}
+
+
+/* Mediam */
+/* @media (min-width: 992px) {
+    .all_page{
+        width: 970px;
+    }
+} */
+/* Large */
+/* @media (min-width: 1200px) {
+    .all_page{
+        width: 1170px;
+    }
+} */ */
+
+/* End Global Rule */
+
+/* Start Header  */
+.header{
+    padding: auto;
+}
+div.contanier_header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #2D2D34;
+    height: 100px;
+}
+.all_page .header .contanier_header .links{
+    position: relative;
+}
+.all_page .header .contanier_header .links:hover .icon span:nth-child(2){
+    width: 100%;
+}
+.all_page .header .contanier_header .links .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 40px 0;
+}
+.all_page .header .contanier_header .links .icon span{
+    background-color: #FFCA42;
+    margin-bottom: 5px;         /* So that they don't stick together for span*/
+}
+.all_page .header .contanier_header .links .icon span:first-child{
+    height: 5px;
+    width: 100%;
+}
+.all_page .header .contanier_header .links .icon span:nth-child(2){
+    height: 5px;
+    width: 60%;
+    transition: .3s;
+}
+.all_page .header .contanier_header .links .icon span:last-child{
+    height: 5px;
+    width: 100%;
+}
+.all_page .header .contanier_header .links ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #FFCA42;
+    position: absolute;         /*So we can control them*/
+    left: 40px;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+}
+.all_page .header .contanier_header .links ul:before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #FFCA42 transparent;
+    position: absolute;
+    left: 5px;                 /*5px => span width 30px , ul::before border 20px + 5px right +5px left */
+    top: -20px;                 /* ul size 20px */
+}
+.all_page .header .contanier_header .links:hover ul{
+    display: block;
+}
+.all_page .header .contanier_header .links ul li a {
+    display: block;
+    padding :20px;
+    text-decoration: none;
+    color: #2D2D34;
+    transition: .3s;
+}
+.all_page .header .contanier_header .links ul li a:hover{
+    padding-left: 40px;
+}
+.all_page .header .contanier_header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #2D2D34;
+}
+div.all_page .header .contanier_header .logo_header span{
+    font-size: 28px;
+    font-family: 'Inter', sans-serif;
+    color: #F6F8FC;
+    font-weight: bold;
+}
+div.all_page .header .contanier_header .nav ul {
+    display: flex;
+    justify-content: space-between;  /*to separeat between the Elements */
+    align-items: center;
+}
+div.all_page .header .contanier_header .nav ul li{
+    padding: 0 30px;
+    list-style: none;
+}
+div.all_page .header .contanier_header .nav ul li a{
+    text-decoration: none;
+    color: #F6F8FC;
+}
+.pragraph{
+    background-color: #2D2D34;
+    text-align: center;
+}
+.pragraph h2{
+    padding:0;
+    margin: 0;
+    color: white;
+    font-family: 'Cardo', serif;
+    font-size: 30px;
+}
+.pragraph span{
+    display: inline-flex;
+    width: 150px;
+    background-color: #FFCA42;
+    height: 3px;
+}
+.pragraph .line{
+    margin: 0 0 10px;
+}
+.pragraph p{
+    padding: 0 0 40px;
+    margin: 0;
+    color: #B4C7E7;
+}
+
+/* End Header  */
+/*  Start mid  */
+div.all_page .mid{
+    background-color: #F6F8FC;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    height: 600px;
+}
+.payment-detalis{
+    width: 80%;
+    height: 80%;
+    background-color: #ffca42;
+    border-radius: 20px;
+}
+.payment-detalis p.title-h{
+    text-align: center;
+    font-size: 30px;
+}
+.payment-detalis .content{
+    position: relative;
+}
+.payment-detalis form{
+    width: 60%;
+    height: 300px;
+    background-color: #FFCA42;
+    position: absolute;
+    margin: 0 30px 0;
+}
+.input-filed input{
+    width: 80%;
+    border-radius: 15px;
+    height: 50px;
+    margin: 0 30px;
+    border-style: solid;
+    border-width: 1px ;
+    border-color: black;
+    background-color: #ffca42
+}
+.input-filed .title{
+    margin: 10px 35px;
+}
+.last_row .title{
+    margin: 10px 35px;
+}
+.input,
+.last_row input{
+    border-radius: 15px;
+    border-style: none;
+    height: 50px;
+    margin: 0 35px 20px ;
+    padding: 0 3px;
+    width: 17.5%;
+    border-style: solid;
+    border-width: 1px ;
+    border-color: black;
+    background-color: #ffca42
+}
+.button{
+    text-align: center;
+}
+.payment-detalis form button{
+    background-color: #2D2D34;
+    color: white;
+    border-radius: 15px;
+    height: 50px;
+    width: 450px;
+    font-family: 'Cardo', serif;
+    font-size: 20px;
+}
+.card_imag {
+    position: absolute;
+    margin: 0 30px 0;
+    right: 20px;
+    top: 70px;
+}
+::placeholder{
+    color: #2D2D34;
+}
+.card_imag img{
+    width:400px ;
+}
+/*  End mid  */
+
+/* Start Footer  */
+div.footer{
+    background-color: #2D2D34;
+    position: relative;
+
+}
+div.contanier_footer{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.contanier_footer .logo_footer {
+    position: relative;
+}
+span.website-name{
+    color: #F6F8FC;
+    font-size: 25px;
+    padding:0 0 0 7px;
+}
+.contanier_footer .logo_footer .media_icon{
+    position: absolute;
+    width: 200px;
+}
+.facebook,
+.twitter,
+.linkedin,
+.git{
+    padding: 10px;
+}
+.list_one{
+    
+}
+.list_one ul li{
+    list-style: none;
+    padding: 5px;
+}
+.list_one ul li span.circle{
+    width: 10px;
+    height: 10px;
+    display: flex;
+    padding: 5px;
+
+}
+.list_one ul li span.circle span{
+    border-style: solid;
+    border-radius: 50%;
+    margin-left: 5px;
+    padding: 1px;
+    border-width: 3px;
+    border-color: #FFCA42;    
+}
+.list_one ul li  a{
+    margin: -8px 10px 0;
+    text-decoration: none;
+    color: #B4C7E7;
+
+}
+.list_two ul li{
+    list-style: none;
+    padding: 5px;
+}
+.list_two ul li span.circle{
+    width: 10px;
+    height: 10px;
+    display: flex;
+    padding: 5px;
+
+}
+.list_two ul li span.circle span{
+    border-style: solid;
+    border-radius: 50%;
+    margin-left: 5px;
+    padding: 1px;
+    border-width: 3px;
+    border-color: #FFCA42;    
+}
+.footer4{
+    color: #7B8FA1;
+    font-size: 15px;
+}
+.footer4 p{
+    margin: 0;
+}
+.list_two ul li  a{
+    margin: -8px 10px 0;
+    text-decoration: none;
+    color: #B4C7E7;
+
+}
+span.line_footer hr {
+    width: 60%;
+    background-color: #FFCA42;
+    border: none;
+    height: 2px;
+}
+footer{
+    text-align: center;
+    color: #B4C7E7;
+}
+/* End Footer z*/

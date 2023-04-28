@@ -1,0 +1,288 @@
+body,
+html {
+  background-color: #f6f8fc;
+  height: 100%;
+  margin: unset;
+}
+
+.logo {
+  text-decoration: none;
+  padding-left: 10px;
+  color: #f6f8fc;
+}
+
+.picture {
+  /* The image used */
+  background-image: url("Assets/pexels-alina-vilchenko-2099266.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(Assets/pexels-alina-vilchenko-2099266.jpg);
+  /* Set a specific height */
+  min-height: 600px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@font-face {
+  font-family: GrapeNuts;
+  src: url(Assets/Fonts/GrapeNuts-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(Assets/Fonts/Roboto-Regular.ttf);
+}
+
+/* Reset default list styles */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style navbar */
+.navMenu {
+  height: 50px;
+}
+
+/* Style navbar links */
+.navMenu ul {
+  display: flex;
+  /* justify-content: end; */
+  align-items: center;
+
+  font-family: Roboto-Regular;
+  font-size: 20px;
+
+  padding-right: 10%;
+  padding-top: 1%;
+
+  /* for the future versions */
+  background-color: #2d2d34;
+  padding-bottom: 1%;
+}
+
+.navMenu .nav-item {
+  color: #f6f8fc;
+  text-decoration: none;
+  padding: 40px;
+}
+
+.navMenu .nav-item:hover {
+  color: #ffca42;
+}
+
+.booktopia {
+  padding-left: 10px;
+  padding-right: 45%;
+  color: #f6f8fc;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .edit-btn {
+    margin-left: 5%;
+  }
+}
+
+.edit-btn {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 18%;
+  margin-top: 1%;
+
+  background-color: #ffca42;
+  color: #2d2d34;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-family: Roboto-Regular;
+
+
+  height: 3%;
+  width: 4%;
+}
+
+.container1, .container2 {
+  display: flex;
+  justify-content: center;
+
+  /* for testing purposes */
+  /* background-color: #2D2D34; */
+  /* -------------------- */
+
+  margin-top: 1%;
+  height: 50%;
+}
+
+.container2 {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.books {
+  display: flex;
+  height: 75%;
+}
+
+/* border for the books */
+.border {
+  display: flex;
+  border-width: fit-content;
+  border: 30px solid #e8eaef;
+}
+
+.links {
+  font-family: Roboto-Regular;
+  text-decoration: none;
+  color: #2d2d34;
+}
+
+.links:hover {
+  color: #ffca42;
+}
+
+.pad {
+  margin-top: 12px;
+}
+
+.subtext {
+  margin-top: 10px;
+
+  font-family: Roboto-Regular;
+  font-size: 12px;
+  opacity: 0.4;
+}
+
+.btn {
+  all: unset;
+  text-align: center;
+  margin-top: 12px;
+
+  background-color: #ffca42;
+  color: #2d2d34;
+
+  cursor: pointer;
+
+  font-size: 13px;
+  font-family: Roboto-Regular;
+
+  width: 45%;
+  height: 10%;
+}
+
+.price {
+  float: right;
+  padding-top: 20px;
+  padding-right: 70px;
+
+  color: #ffca42;
+  font-family: Roboto-Regular;
+  font-weight: bold;
+}
+/* Start Footer  */
+div.footer{
+  background-color: #2D2D34;
+  position: relative;
+
+}
+div.contanier_footer{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.contanier_footer .logo_footer {
+  position: relative;
+}
+span.website-name{
+  color: #F6F8FC;
+  font-size: 25px;
+  padding:0 0 0 7px;
+}
+.contanier_footer .logo_footer .media_icon{
+  position: absolute;
+  width: 200px;
+}
+.facebook,
+.twitter,
+.linkedin,
+.git{
+  padding: 10px;
+}
+.list_one{
+  
+}
+.list_one ul li{
+  list-style: none;
+  padding: 5px;
+}
+.list_one ul li span.circle{
+  width: 10px;
+  height: 10px;
+  display: flex;
+  padding: 5px;
+
+}
+.list_one ul li span.circle span{
+  border-style: solid;
+  border-radius: 50%;
+  margin-left: 5px;
+  padding: 1px;
+  border-width: 3px;
+  border-color: #FFCA42;    
+}
+.list_one ul li  a{
+  margin: -8px 10px 0;
+  text-decoration: none;
+  color: #B4C7E7;
+
+}
+.list_two ul li{
+  list-style: none;
+  padding: 5px;
+}
+.list_two ul li span.circle{
+  width: 10px;
+  height: 10px;
+  display: flex;
+  padding: 5px;
+
+}
+.list_two ul li span.circle span{
+  border-style: solid;
+  border-radius: 50%;
+  margin-left: 5px;
+  padding: 1px;
+  border-width: 3px;
+  border-color: #FFCA42;    
+}
+.footer4{
+  color: #7B8FA1;
+  font-size: 15px;
+}
+.footer4 p{
+  margin: 0;
+}
+.list_two ul li  a{
+  margin: -8px 10px 0;
+  text-decoration: none;
+  color: #B4C7E7;
+
+}
+span.line_footer hr {
+  width: 60%;
+  background-color: #FFCA42;
+  border: none;
+  height: 2px;
+}
+footer{
+  text-align: center;
+  color: #B4C7E7;
+}
+/* End Footer  */
