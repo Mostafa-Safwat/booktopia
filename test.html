@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button to Request Image</title>
+  </head>
+  <body>
+    <button onclick="requestImage()">Request Image</button>
+    <br>
+    <img id="image" src="#" alt="Image">
+    
+    <script>
+      function requestImage() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'path/to/image.jpg', true);
+        xhr.responseType = 'blob';
+        xhr.onload = function() {
+          if (this.status === 200) {
+            var blob = this.response;
+            var img = document.getElementById('image');
+            img.src = URL.createObjectURL(blob);
+          }
+        };
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
