@@ -81,34 +81,6 @@ ul {
   font-size: 40px;
 }
 
-@media only screen and (max-width: 1400px) {
-  .edit-btn {
-    margin-left: 5%;
-  }
-}
-
-.edit-btn {
-  all: unset;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-left: 18%;
-  margin-top: 1%;
-
-  background-color: #ffca42;
-  color: #2d2d34;
-
-  cursor: pointer;
-
-  font-size: 13px;
-  font-family: Roboto-Regular;
-
-
-  height: 3%;
-  width: 4%;
-}
-
 .container1, .container2 {
   display: flex;
   justify-content: center;

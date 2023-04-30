@@ -1,0 +1,192 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+.header {
+  padding: auto;
+}
+div.contanier_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d2d34;
+  height: 100px;
+}
+.all_page .header .contanier_header .links {
+  position: relative;
+}
+.all_page .header .contanier_header .links:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+.all_page .header .contanier_header .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 40px 0;
+}
+.all_page .header .contanier_header .links .icon span {
+  background-color: #ffca42;
+  margin-bottom: 5px; /* So that they don't stick together for span*/
+}
+.all_page .header .contanier_header .links .icon span:first-child {
+  height: 5px;
+  width: 100%;
+}
+.all_page .header .contanier_header .links .icon span:nth-child(2) {
+  height: 5px;
+  width: 60%;
+  transition: 0.3s;
+}
+.all_page .header .contanier_header .links .icon span:last-child {
+  height: 5px;
+  width: 100%;
+}
+.all_page .header .contanier_header .links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffca42;
+  position: absolute; /*So we can control them*/
+  left: 40px;
+  min-width: 200px;
+  top: calc(100% + 15px);
+  display: none;
+}
+.all_page .header .contanier_header .links ul:before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffca42 transparent;
+  position: absolute;
+  left: 5px; /*5px => span width 30px , ul::before border 20px + 5px right +5px left */
+  top: -20px; /* ul size 20px */
+}
+.all_page .header .contanier_header .links:hover ul {
+  display: block;
+}
+.all_page .header .contanier_header .links ul li a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #2d2d34;
+  transition: 0.3s;
+}
+.all_page .header .contanier_header .links ul li a:hover {
+  padding-left: 40px;
+}
+.all_page .header .contanier_header .links ul li:not(:last-child) a {
+  border-bottom: 1px solid #2d2d34;
+}
+div.all_page .header .contanier_header .logo_header span {
+  font-size: 28px;
+  font-family: "Inter", sans-serif;
+  color: #f6f8fc;
+  font-weight: bold;
+}
+div.all_page .header .contanier_header .nav ul {
+  display: flex;
+  justify-content: space-between; /*to separeat between the Elements */
+  align-items: center;
+}
+div.all_page .header .contanier_header .nav ul li {
+  padding: 0 30px;
+  list-style: none;
+}
+div.all_page .header .contanier_header .nav ul li a {
+  text-decoration: none;
+  color: #f6f8fc;
+}
+.pragraph {
+  background-color: #2d2d34;
+  text-align: center;
+}
+.pragraph h2 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "Cardo", serif;
+  font-size: 30px;
+}
+.pragraph span {
+  display: inline-flex;
+  width: 150px;
+  background-color: #ffca42;
+  height: 3px;
+}
+.pragraph .line {
+  margin: 0 0 10px;
+}
+.pragraph p {
+  padding: 0 0 40px;
+  margin: 0;
+  color: #b4c7e7;
+}
+/* end of header */
+
+form {
+  display: flex;
+  max-width: 420px;
+  margin: 50px auto;
+}
+
+.add-container {
+  display: flex;
+  justify-content: center;
+  height: 75vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.book-name, .book-disc{
+
+  font-size: 18px;
+  font-weight: 500;
+  color:#2d2d34;
+
+  border-radius: 5px;
+  background-color: transparent;
+
+  border:2px solid #2d2d34;
+  transition: all 0.3s;
+
+  padding: 13px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  outline:0;
+}
+
+.book-name:focus, .book-disc:focus{
+  border: 2px solid #ffca42;
+}
+
+.book-disc {
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+.add-book {
+  background-color: #2d2d34;
+  border: 0;
+  border-radius:  8px;
+  cursor:pointer;
+
+  color: #f6f8fc;
+  font-size: 24px;
+  font-weight: bolder;
+
+  height: 9%;
+  transition: all 0.3s;
+}
+
+.add-book:hover {
+  background-color: #ffca42;
+  color: #2d2d34;
+}
+
+.book-name, .book-disc, .add-book {
+  font-family: Arial, Helvetica, sans-serif;
+}
