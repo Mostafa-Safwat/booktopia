@@ -5,6 +5,11 @@ body {
   width: 100%;
 }
 
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(Fonts/Roboto-Regular.ttf);
+}
+
 .header {
   padding: auto;
 }
@@ -221,7 +226,25 @@ form {
 .book-name,
 .book-disc,
 .add-book {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto-Regular;
+}
+
+.endText {
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  color: #2d2d34;
+  font-weight: bold;
+  font-family: Roboto-Regular;
+}
+
+.link {
+  color: #ffca42;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #2d2d34;
 }
 
 /* Start Footer  */
