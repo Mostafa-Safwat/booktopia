@@ -133,7 +133,8 @@ ul {
 .container3 {
   display: flex;
   background-color: #2d2d34;
-  padding-bottom: 25px;   /*===============add== abdalrahman ========*/
+  padding-bottom: 25px;
+  /*===============add== abdalrahman ========*/
   margin-top: 5%;
   padding-top: 20px;
   height: 34%;
@@ -193,9 +194,10 @@ ul {
 .reviewBox {
   display: grid;
   place-items: end;
-  height: 80vh;                         /*==================*/
-  padding-top: 25px;            /*=====add abdalrahman========*/
-
+  height: 80vh;
+  /*==================*/
+  padding-top: 25px;
+  /*=====add abdalrahman========*/
 }
 
 /* ---------- Mr Potato ---------- */
@@ -337,6 +339,7 @@ ul {
   margin-bottom: -19%;
   margin-left: 69px;
 }
+
 /* ---- ! end of review ! ---- */
 
 .endBox {
@@ -344,7 +347,8 @@ ul {
 
   background-color: #2d2d34;
 
-  height: 37vh;   /*=======================================*/
+  height: 37vh;
+  /*=======================================*/
 }
 
 .endText {
@@ -389,101 +393,114 @@ ul {
   margin-top: 8px;
   margin-left: 28%;
 }
+
 /* Start Footer  */
-div.footer{
+div.footer {
   background-color: #ffca42;
   position: relative;
-
 }
-div.contanier_footer{
+
+div.contanier_footer {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
 }
+
 .contanier_footer .logo_footer {
   position: relative;
 }
-span.website-name{
-  color: #F6F8FC;
+
+span.website-name {
+  color: #f6f8fc;
   font-size: 25px;
-  padding:0 0 0 7px;
+  padding: 0 0 0 7px;
 }
-.contanier_footer .logo_footer .media_icon{
+
+.contanier_footer .logo_footer .media_icon {
   position: absolute;
   width: 200px;
 }
+
 .facebook,
 .twitter,
 .linkedin,
-.git{
+.git {
   padding: 10px;
 }
-.list_one ul li{
+
+.list_one ul li {
   list-style: none;
   padding: 5px;
 }
-.list_one ul li span.circle{
+
+.list_one ul li span.circle {
   width: 10px;
   height: 10px;
   display: flex;
   padding: 5px;
-
 }
-.list_one ul li span.circle span{
+
+.list_one ul li span.circle span {
   border-style: solid;
   border-radius: 50%;
   margin-left: 5px;
   padding: 1px;
   border-width: 3px;
-  border-color: #1B3764;    
+  border-color: #1b3764;
 }
-.list_one ul li  a{
+
+.list_one ul li a {
   margin: -8px 10px 0;
   text-decoration: none;
-  color: #1B3764;
-
+  color: #1b3764;
 }
-.list_two ul li{
+
+.list_two ul li {
   list-style: none;
   padding: 5px;
 }
-.list_two ul li span.circle{
+
+.list_two ul li span.circle {
   width: 10px;
   height: 10px;
   display: flex;
   padding: 5px;
-
 }
-.list_two ul li span.circle span{
+
+.list_two ul li span.circle span {
   border-style: solid;
   border-radius: 50%;
   margin-left: 5px;
   padding: 1px;
   border-width: 3px;
-  border-color: #1B3764;    
+  border-color: #1b3764;
 }
-.footer4{
-  color: #1B3764;
+
+.footer4 {
+  color: #1b3764;
   font-size: 15px;
 }
-.footer4 p{
+
+.footer4 p {
   margin: 0;
 }
-.list_two ul li  a{
+
+.list_two ul li a {
   margin: -8px 10px 0;
   text-decoration: none;
-  color: #1B3764;
-
+  color: #1b3764;
 }
+
 span.line_footer hr {
   width: 60%;
   background-color: #2d2d34;
   border: none;
   height: 2px;
 }
-footer{
-  text-align: center;
-  color: #1B3764;
-}
-/* End Footer  */
 
+footer {
+  text-align: center;
+  color: #1b3764;
+}
+
+/* End Footer  */
