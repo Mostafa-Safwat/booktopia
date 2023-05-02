@@ -211,7 +211,9 @@ form {
   margin-top: 2%;
 }
 
-.add-btn, .edit-btn, .delete-btn {
+.add-btn,
+.edit-btn,
+.delete-btn {
   background-color: #2d2d34;
   border: 0;
   border-radius: 8px;
@@ -232,7 +234,7 @@ form {
 }
 
 .edit-btn:hover {
-  background-color: #1B3764;
+  background-color: #1b3764;
 }
 
 .delete-btn:hover {
@@ -262,7 +264,6 @@ form {
 .link:hover {
   color: #2d2d34;
 }
-
 
 table {
   width: 97%;
