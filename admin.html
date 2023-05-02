@@ -8,7 +8,7 @@
     <title>Admin | Booktopia</title>
 
     <!-- Main templet css flie -->
-    <link rel="stylesheet" href="admin-table.css" />
+    <link rel="stylesheet" href="admin.css" />
     <!--Logo title-->
     <link rel="icon" type="image/jpg" href="Images/Vector.png" />
   </head>
@@ -52,14 +52,25 @@
       </div>
     </div>
     <!-- End Header -->
-    <a href="admin-add.html"> <button class="btn-Add" type="button">ADD</button></a>
+    <form class="add-container">
+      <input type="file" name="myfile" />
+      <input class="book-name" name="name" type="text" placeholder="name" />
+      <input class="book-name" name="price" type="number" placeholder="price" />
+      <textarea class="book-disc" name="description" placeholder="description"></textarea>
+      <div class="btn-container">
+      <button class="add-btn" type="button">Add</button>
+      <button class="edit-btn" type="button">Edit</button>
+      <button class="delete-btn" type="button">Delete</button>
+      </div>
+
+    </form>
     <table>
         <thead>
           <tr>
             <th style="width:15%">Name</th>
             <th style="width:4%">Price</th>
             <th>Description</th>
-            <th style="width:4%">Delete</th>
+            <th>Image</th>
           </tr>
         </thead>
         <tbody>
@@ -67,67 +78,67 @@
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
           <tr>
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
           <tr>
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
           <tr>
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
           <tr>
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
           <tr>
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
           <tr>
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
           <tr>
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
           <tr>
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
           <tr>
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
           <tr>
             <td data-column="Name">Lorem</td>
             <td data-column="Price">100</td>
             <td data-column="Description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione iste alias reprehenderit fuga dolore, et distinctio, rem in hic, nobis voluptate omnis. Voluptates neque magnam quis placeat harum, reprehenderit ullam!</td>
-            <td data-column="Delete"><button class="btn" type="button">DELETE</button></td>
+            <td data-column="Image">Lorem.png</td>
           </tr>
         </tbody>
       </table>

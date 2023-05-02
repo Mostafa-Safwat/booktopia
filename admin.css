@@ -160,6 +160,110 @@ div.all_page .header .contanier_header .nav ul li a {
 
 /* end of header */
 
+form {
+  display: flex;
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.add-container {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.book-name,
+.book-disc {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2d2d34;
+
+  border-radius: 5px;
+  background-color: transparent;
+
+  border: 2px solid #2d2d34;
+  transition: all 0.3s;
+
+  padding: 13px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
+  outline: 0;
+}
+
+.book-name:focus,
+.book-disc:focus {
+  border: 2px solid #ffca42;
+}
+
+.book-disc {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.add-btn, .edit-btn, .delete-btn {
+  background-color: #2d2d34;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+
+  color: #f6f8fc;
+  font-size: 20px;
+  font-weight: bolder;
+
+  padding: 2%;
+  width: 30%;
+  transition: all 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #ffca42;
+  color: #2d2d34;
+}
+
+.edit-btn:hover {
+  background-color: #1B3764;
+}
+
+.delete-btn:hover {
+  background-color: #c70000;
+}
+
+.book-name,
+.book-disc,
+.add-book {
+  font-family: Roboto-Regular;
+}
+
+.endText {
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  color: #2d2d34;
+  font-weight: bold;
+  font-family: Roboto-Regular;
+}
+
+.link {
+  color: #ffca42;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #2d2d34;
+}
+
+
 table {
   width: 97%;
   border-collapse: collapse;
