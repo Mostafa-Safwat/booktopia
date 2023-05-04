@@ -53,17 +53,7 @@
     </div>
     <!-- End Header -->
 
-    <?php 
-      // if($_SERVER['REQUEST_METHOD'] == 'POST'){
-      // //   // to download the uploaded image and put it inside the Downloads folder
-        // $img = $_FILES['book-img'];
-        // $img_name = $img['name'];
-        // $img_location = $img['tmp_name'];
-        // $target_dir = "Downloads/";
-        // $target_file = $target_dir . basename($img_name);
-        // copy($img_location, $target_file);
-      // }
-      
+    <?php       
       //to connect to database server
         $host = "localhost";
         $user = "root";
@@ -74,10 +64,23 @@
 
         $r = mysqli_query($conn, "SELECT * FROM booktable");
       // if(isset($_POST['add-btn'])) {
+        $ID = "";
         $name = "";
         $price = "";
         $disc = "";
         $book_cover = "";
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add-btn'])){
+          $img = $_FILES['book-img'];
+          $img_name = $img['name'];
+          $img_location = $img['tmp_name'];
+          copy($img_location, $img_name);
+          $book_cover = $img_name;
+        }
+        
+        if( isset($_POST['book-ID'])){
+          $ID = $_POST['book-ID'];
+        }
 
         if( isset($_POST['book-name'])){
           $name = $_POST['book-name'];
@@ -91,34 +94,29 @@
           $disc = $_POST['book-description'];
         }
 
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-          $img = $_FILES['book-img'];
-          $img_name = $img['name'];
-          $img_location = $img['tmp_name'];
-          $target_dir = "Downloads/";
-          $target_file = $target_dir . basename($img_name);
-          copy($img_location, $target_file);
-          $book_cover = $img_name;
-        }
         $sql = "";
         if( isset($_POST['add-btn'])) {
           $sql = "insert into booktable (Name, Price, Description, Image) values('$name', $price, '$disc', '$book_cover')";
           mysqli_query($conn, $sql);
+          header("location: admin.php");
         }
 
-        // //to insert query into database
-        // $insert = "insert into booktable (Name, Price, Description, Image) values('The KIM', 50, 'Lorem Ipsum', 'img.png')";
-        // $query = mysqli_query($conn, $insert);
+        if( isset($_POST['edit-btn'])) {
+          $sql = "update booktable set Name = '$name', Price = $price, Description = '$disc' where ID = $ID";
+          mysqli_query($conn, $sql);
+          header("location: admin.php");
+        }
 
-        // if($query) {
-        //   echo "OK";
-        // }
-      //}
-
+        if( isset($_POST['delete-btn'])) {
+          $sql = "delete from booktable where ID = $ID";
+          mysqli_query($conn, $sql);
+          header("location: admin.php");
+        }
     ?>
 
     <form class="add-container" method="post" enctype="multipart/form-data">
       <input type="file" name="book-img" />
+      <input class="book-id" id= "bID" name="book-ID" type="text" placeholder="ID" readonly />
       <input class="book-name" id= "bname" name="book-name" type="text" placeholder="name" />
       <input class="book-name" id= "bprice" name="book-price" type="number" placeholder="price" />
       <textarea class="book-disc" id= "bdes" name="book-description" placeholder="description"></textarea>
@@ -131,17 +129,18 @@
     <table id="booktable">
         <thead>
           <tr>
+            <th style="width:1%">ID</th>
             <th style="width:15%">Name</th>
             <th style="width:4%">Price</th>
             <th>Description</th>
-            <th>Image</th>
+            <th style="width:5%">Image</th>
           </tr>
         </thead>
         <tbody>
         <?php
           while ( $row = mysqli_fetch_array($r)) {
             echo "<tr>";
-              "<td>" . $row['ID'] . "</td>";
+              echo "<td>" . $row['ID'] . "</td>";
               echo "<td>" . $row['Name'] . "</td>";
               echo "<td>" . $row['Price'] . "</td>";
               echo "<td>" . $row['Description'] . "</td>";
@@ -158,9 +157,10 @@
 
         for (var x = 1; x < tbl.rows.length ; x++){
           tbl.rows[x].onclick = function(){
-            document.getElementById("bname").value = this.cells[0].innerHTML
-            document.getElementById("bprice").value = this.cells[1].innerHTML
-            document.getElementById("bdes").value = this.cells[2].innerHTML
+            document.getElementById("bID").value = this.cells[0].innerHTML
+            document.getElementById("bname").value = this.cells[1].innerHTML
+            document.getElementById("bprice").value = this.cells[2].innerHTML
+            document.getElementById("bdes").value = this.cells[3].innerHTML
           }
         }
 
