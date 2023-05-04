@@ -169,13 +169,13 @@ form {
 .add-container {
   display: flex;
   justify-content: center;
-  height: 50vh;
+  height: 70vh;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
 .book-name,
-.book-disc {
+.book-disc, .book-id {
   font-size: 18px;
   font-weight: 500;
   color: #2d2d34;
@@ -191,6 +191,11 @@ form {
   margin-top: 10px;
 
   outline: 0;
+}
+
+.book-id {
+  cursor: no-drop;
+  border: 2px solid #7b7b84;
 }
 
 .book-name:focus,
