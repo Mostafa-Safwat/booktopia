@@ -71,11 +71,20 @@
         $book_cover = "";
 
         if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['add-btn'])){
-          $img = $_FILES['book-img'];
-          $img_name = $img['name'];
-          $img_location = $img['tmp_name'];
-          copy($img_location, $img_name);
-          $book_cover = $img_name;
+        
+          if(isset($_FILES['book-img']) && $_FILES['book-img']['error'] == 0){ // check if an image has been uploaded
+            $img = $_FILES['book-img'];
+            $img_name = $img['name'];
+            $img_location = $img['tmp_name'];
+            copy($img_location, $img_name);
+            $book_cover = $img_name;
+          }
+          else {
+            // assign a default image if no image is uploaded
+            $book_cover = "Book1.png";
+          }
+        
+          // rest of the code for adding the book to the database
         }
         
         if( isset($_POST['book-ID'])){
