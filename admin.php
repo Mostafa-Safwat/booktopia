@@ -66,53 +66,50 @@
   $disc = "";
   $book_cover = "";
 
-  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  if (isset($_FILES['book-img']) && $_FILES['book-img']['error'] == 0) { // check if an image has been uploaded
+    $img = $_FILES['book-img'];
+    $img_name = $img['name'];
+    $img_location = $img['tmp_name'];
+    copy($img_location, $img_name);
+    $book_cover = $img_name;
+  } else {
+    // assign a default image if no image is uploaded
+    $book_cover = "Book1.png";
+  }
 
-    if (isset($_FILES['book-img']) && $_FILES['book-img']['error'] == 0) { // check if an image has been uploaded
-      $img = $_FILES['book-img'];
-      $img_name = $img['name'];
-      $img_location = $img['tmp_name'];
-      copy($img_location, $img_name);
-      $book_cover = $img_name;
-    } else {
-      // assign a default image if no image is uploaded
-      $book_cover = "Book1.png";
-    }
+  if (isset($_POST['book-ID'])) {
+    $ID = $_POST['book-ID'];
+  }
 
-    if (isset($_POST['book-ID'])) {
-      $ID = $_POST['book-ID'];
-    }
+  if (isset($_POST['book-name'])) {
+    $name = $_POST['book-name'];
+  }
 
-    if (isset($_POST['book-name'])) {
-      $name = $_POST['book-name'];
-    }
+  if (isset($_POST['book-price'])) {
+    $price = $_POST['book-price'];
+  }
 
-    if (isset($_POST['book-price'])) {
-      $price = $_POST['book-price'];
-    }
+  if (isset($_POST['book-description'])) {
+    $disc = $_POST['book-description'];
+  }
 
-    if (isset($_POST['book-description'])) {
-      $disc = $_POST['book-description'];
-    }
+  $sql = "";
+  if (isset($_POST['add-btn'])) {
+    $sql = "insert into booktable (Name, Price, Description, Image) values('$name', $price, '$disc', '$book_cover')";
+    mysqli_query($conn, $sql);
+    header("location: admin.php");
+  }
 
-    $sql = "";
-    if (isset($_POST['add-btn'])) {
-      $sql = "insert into booktable (Name, Price, Description, Image) values('$name', $price, '$disc', '$book_cover')";
-      mysqli_query($conn, $sql);
-      header("location: admin.php");
-    }
+  if (isset($_POST['edit-btn'])) {
+    $sql = "update booktable set Name = '$name', Price = $price, Description = '$disc' where ID = $ID";
+    mysqli_query($conn, $sql);
+    header("location: admin.php");
+  }
 
-    if (isset($_POST['edit-btn'])) {
-      $sql = "update booktable set Name = '$name', Price = $price, Description = '$disc' where ID = $ID";
-      mysqli_query($conn, $sql);
-      header("location: admin.php");
-    }
-
-    if (isset($_POST['delete-btn'])) {
-      $sql = "delete from booktable where ID = $ID";
-      mysqli_query($conn, $sql);
-      header("location: admin.php");
-    }
+  if (isset($_POST['delete-btn'])) {
+    $sql = "delete from booktable where ID = $ID";
+    mysqli_query($conn, $sql);
+    header("location: admin.php");
   }
   ?>
 
