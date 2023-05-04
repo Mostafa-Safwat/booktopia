@@ -63,7 +63,6 @@
         $conn = mysqli_connect($host, $user, $pass, $db);
 
         $r = mysqli_query($conn, "SELECT * FROM booktable");
-      // if(isset($_POST['add-btn'])) {
         $ID = "";
         $name = "";
         $price = "";
@@ -83,8 +82,6 @@
             // assign a default image if no image is uploaded
             $book_cover = "Book1.png";
           }
-        
-          // rest of the code for adding the book to the database
         }
         
         if( isset($_POST['book-ID'])){
