@@ -290,6 +290,11 @@ td {
   color: #2d2d34;
 }
 
+tr:hover {
+  background-color: #cfcfcf;
+  cursor: pointer;
+}
+
 .btn {
   background-color: #2d2d34;
   border: 0;
