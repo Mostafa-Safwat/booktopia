@@ -74,7 +74,7 @@
     $book_cover = $img_name;
   } else {
     // assign a default image if no image is uploaded
-    $book_cover = "Book1.png";
+    $book_cover = "default_book_cover.jpg";
   }
 
   if (isset($_POST["book-ID"])) {
@@ -118,7 +118,7 @@
     <input type="file" name="book-img" accept="image/*" />
     <input class="book-id" id="bID" name="book-ID" type="text" placeholder="ID" readonly />
     <input class="book-name" id="bname" name="book-name" type="text" placeholder="name" />
-    <input class="book-name" id="bprice" name="book-price" type="number" placeholder="price" />
+    <input class="book-name" id="bprice" name="book-price" type="number" step="any" placeholder="price" />
     <textarea class="book-disc" id="bdes" name="book-description" placeholder="description"></textarea>
     <div class="btn-container">
       <input class="add-btn" type="submit" name="add-btn" value="Add">
