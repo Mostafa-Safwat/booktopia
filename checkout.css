@@ -2,7 +2,6 @@
 
 /* End Variables */
 
-
 /* Start Global Rule */
 
 
@@ -11,36 +10,8 @@ body{
     font-family: 'Poppins', sans-serif;
     height: 100vh;
     width: 100%;
+    margin: 0;
 }
-.all_page{
-    /* padding-left: 15px;
-    padding-right:15px ;
-    margin-left: auto;
-    margin-right:auto ; */
-}
-
-/* Small
-@media (min-width: 768px) {
-    .all_page{
-        width: 750px;
-    }
-}
-
-
-/* Mediam */
-/* @media (min-width: 992px) {
-    .all_page{
-        width: 970px;
-    }
-} */
-
-/* Large */
-/* @media (min-width: 1200px) {
-    .all_page{
-        width: 1170px;
-    }
-} */ */
-/* End Global Rule */
 
 /* Start Header  */
 .header{
@@ -277,16 +248,9 @@ form button a{
     position: relative;
     right: 1%;
     height: 260px;
-    top: -50px;
-}
-.order-details{
-    background-color: #FFCA42;
-    border-radius: 20px;
-    position: relative;
-    right: 1%;
-    width: 360px;
-    height: 370px;
-    top: 35px;
+    width: 260px;
+    padding-left: 20px;
+    padding-top: 20px;
 }
 /* End mid  */
 
@@ -318,9 +282,6 @@ span.website-name{
 .linkedin,
 .git{
     padding: 10px;
-}
-.list_one{
-    
 }
 .list_one ul li{
     list-style: none;

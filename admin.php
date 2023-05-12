@@ -112,8 +112,6 @@
     header("location: admin.php");
   }
 ?>
-
-
   <form class="add-container" method="post" enctype="multipart/form-data">
     <input type="file" name="book-img" accept="image/*" />
     <input class="book-id" id="bID" name="book-ID" type="text" placeholder="ID" readonly />

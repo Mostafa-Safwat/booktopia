@@ -49,7 +49,7 @@
           <div class="pad"><?php echo $row['Name']; ?></div>
         </a>
         <div class="subtext"><?php echo $row['Description']; ?></div>
-        <a class="btn" href="/Product"><button class="btn" type="button">Buy Now</button></a>
+        <a class="btn" href="checkout.php?book_id=<?php echo $row['ID']; ?>"><button class="btn" type="button">Buy Now</button></a>
         <div class="price">$<?php echo $row['Price']; ?></div>
       </div>
     </div>
