@@ -66,6 +66,7 @@
   $disc = "";
   $book_cover = "";
 
+
   if (isset($_FILES["book-img"]) && $_FILES["book-img"]["error"] == 0) { // check if an image has been uploaded
     $img = $_FILES["book-img"];
     $img_name = $img["name"];

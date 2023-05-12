@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Booktopia Sign In</title>
+        <title>Booktopia Sign Up</title>
         <link rel="stylesheet" href="sign in.css">
         <link rel="icon" type="image/jpg" href="Image/Logo (1).png">
     </head>
     <body>
+    <?php
+        //to connect to database server
+        $host = "localhost";
+        $user = "root";
+        $pass = "";
+        $db = "book-data";
+
+        $conn = mysqli_connect($host, $user, $pass, $db);
+    ?>
         <div class="all_page">
             <nav>
                 <a href="" class="book"><img src="Image/Logo (1).png" alt="image"> Pages</a>
@@ -15,14 +24,32 @@
                 <a href="" class="basckt"><img src="Image/pngegg.png" alt="" ></a>
             </nav>
             <div>
-                <form>
-                    <label><h1>Sign In</h1></label><br>
+            <?php 
+                $fname = "";
+                $lname = "";
+                $email = "";
+                $password = "";
+                $sql = "";
+                if (isset($_POST["signUp"])) {
+                    $fname = $_POST["fname"];
+                    $lname = $_POST["lname"];
+                    $email = $_POST["email"];
+                    $password = $_POST["password"];
+                    $sql = "INSERT INTO users (`First Name`, `Last Name`, `Email`, `Password`) 
+                    VALUES ('$fname', '$lname', '$email', '$password')";
+
+                    mysqli_query($conn, $sql);
+                    echo '<script>alert("You signed up successfully!")</script>';
+                    }
+                    ?>
+                <form method="post">
+                    <label><h1>Sign Up</h1></label><br>
                     <input type="text" name="fname" placeholder="First Name"><br>
                     <input type="text" name="lname" placeholder="Last Name"><br>
-                    <input type="email" placeholder="Email....."><br>
+                    <input type="email" name="email" placeholder="Email....."><br>
                     <label><i>password</i></label><br>
-                    <input type="password" placeholder="password......"><br><br>
-                    <input type="button" value="Log In" class="Button_form">
+                    <input type="password" name="password" placeholder="password......"><br><br>
+                    <input type="submit" name="signUp" value="Sign Up" class="Button_form">
                     <p>Don't have an account?</p>
                     <a href=""><b>Sign Up</b></a>
                 </form>

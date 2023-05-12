@@ -97,7 +97,7 @@
                           VALUES ($book_id, '$fname', '$lname', '$address_1', '$address_2', '$country', '$city', '$state', '$post_code', '$ph_num', '$email')";
 
                           mysqli_query($conn, $sql);
-                          echo "Your information has been submitted successfully!";
+                          echo '<script>alert("Your information has been submitted successfully!")</script>';
                         }
                         ?>
                         <form method="post" class="address-form">

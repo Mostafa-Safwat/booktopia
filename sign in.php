@@ -6,6 +6,15 @@
         <link rel="icon" type="image/jpg" href="Image/Logo (1).png">
     </head>
     <body>
+    <?php
+        //to connect to database server
+        $host = "localhost";
+        $user = "root";
+        $pass = "";
+        $db = "book-data";
+
+        $conn = mysqli_connect($host, $user, $pass, $db);
+    ?>
         <div class="all_page">
             <nav>
                 <a href="" class="book"><img src="Image/Logo (1).png" alt="image"> Pages</a>
@@ -15,14 +24,40 @@
                 <a href="" class="basckt"><img src="Image/pngegg.png" alt="" ></a>
             </nav>
             <div>
-                <form>
+            <?php
+                session_start();
+                $email = "";
+                $password = "";
+                $sql = "";
+                if (isset($_POST["signIn"])) {
+                    $email = $_POST["email"];
+                    $password = $_POST["password"];
+                    $sql = "SELECT * FROM users WHERE Email = '$email' AND Password = '$password'";
+
+                    $result = mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_assoc($result);
+
+                    if ($row) {
+                        $_SESSION['user_id'] = $row['ID'];
+                        $_SESSION['is_admin'] = ($row['ID'] == 1); // Set is_admin to true if user's ID is 1
+                        
+                        if ($_SESSION['is_admin']) {
+                            header('Location: admin.php'); // Redirect to admin page if user is admin
+                        } else {
+                            header('Location: store.php'); // Redirect to store page if user is not admin
+                        }
+                    } else {
+                        echo '<script>alert("Invalid email or password")</script>';
+                    }
+                }
+
+            ?>
+                <form method="post">
                     <label><h1>Sign In</h1></label><br>
-                    <input type="text" name="fname" placeholder="First Name"><br>
-                    <input type="text" name="lname" placeholder="Last Name"><br>
-                    <input type="email" placeholder="Email....."><br>
+                    <input type="email" name="email" placeholder="Email....."><br>
                     <label><i>password</i></label><br>
-                    <input type="password" placeholder="password......"><br><br>
-                    <input type="button" value="Log In" class="Button_form">
+                    <input type="password" name="password" placeholder="password......"><br><br>
+                    <input type="submit" name="signIn" value="Log In" class="Button_form">
                     <p>Don't have an account?</p>
                     <a href=""><b>Sign Up</b></a>
                 </form>
