@@ -58,6 +58,13 @@
   $db = "book-data";
 
   $conn = mysqli_connect($host, $user, $pass, $db);
+    session_start();
+    if (!isset($_SESSION['user_id']) || !$_SESSION['is_admin']) {
+        // User is not logged in or not an admin, redirect to login page
+        header("Location: sign in.php");
+        exit();
+    }
+
 
   $read = mysqli_query($conn, "SELECT * FROM booktable");
   $ID = "";

@@ -39,7 +39,7 @@
 
                     if ($row) {
                         $_SESSION['user_id'] = $row['ID'];
-                        $_SESSION['is_admin'] = ($row['ID'] == 1); // Set is_admin to true if user's ID is 1
+                        $_SESSION['is_admin'] = ($row['is_admin'] == 1); // Set is_admin to true if user's ID is 1
                         
                         if ($_SESSION['is_admin']) {
                             header('Location: admin.php'); // Redirect to admin page if user is admin

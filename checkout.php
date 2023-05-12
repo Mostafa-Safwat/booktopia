@@ -8,7 +8,7 @@
     <meta name="description" content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed cumque corporis totam inventore nostrum quia veniam omnis dolorum, ex nemo necessitatibus, perferendis voluptates et facere cum itaque laborum, repellat quis.">
     
     <title>Checkout | Booktopia</title>
-    
+
     <!-- Main templet css flie -->
     <link rel="stylesheet" href="checkout.css">
     <!--Logo title-->
@@ -35,7 +35,12 @@
 
     $book_id = $_GET['book_id'];
 
-    $read = mysqli_query($conn, "SELECT * FROM booktable WHERE ID = $book_id");
+    if(!isset($book_id)) {
+        header("Location: store.php");
+        exit();
+    } 
+
+    $read = mysqli_query($conn, "SELECT * FROM booktable WHERE ID = '$book_id'");
     $row = mysqli_fetch_array($read);
     ?>
     <div class="all_page">
@@ -97,7 +102,7 @@
                           VALUES ($book_id, '$fname', '$lname', '$address_1', '$address_2', '$country', '$city', '$state', '$post_code', '$ph_num', '$email')";
 
                           mysqli_query($conn, $sql);
-                          echo '<script>alert("Your information has been submitted successfully!")</script>';
+                          echo '<script>alert("Welcome to Geeks for Geeks")</script>';
                         }
                         ?>
                         <form method="post" class="address-form">
