@@ -97,6 +97,7 @@
                           VALUES ($book_id, '$fname', '$lname', '$address_1', '$address_2', '$country', '$city', '$state', '$post_code', '$ph_num', '$email')";
 
                           mysqli_query($conn, $sql);
+                          echo "Your information has been submitted successfully!";
                         }
                         ?>
                         <form method="post" class="address-form">
@@ -139,13 +140,14 @@
                             <div class="state_post">
                                     <label for="State"> State </label>
                                     <select class="input" name="state" id="city">
-                                        <option value="volvo"> Egypt</option>
-                                        <option value="saab">Kingdom</option>
-                                        <option value="opel">USA</option>
-                                        <option value="audi">Saudi Arabia </option>
+                                    <option value=""> Select Country </option>
+                                    <option value="Egypt"> Egypt</option>
+                                    <option value="UK">UK</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Saudi Arabia">Saudi Arabia</option>
                                     </select>
                                 <label for="post_code"> Post Code</label>
-                                <input  type="text" name="post_code" placeholder="  40404" required>
+                                <input  type="text" name="post_code" placeholder="40404" required>
                             </div>
                             <div class="tel_info">
                                 <label for="ph_num"> Phone Number</label>
