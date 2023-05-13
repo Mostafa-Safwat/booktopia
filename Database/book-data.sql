@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2023 at 06:27 PM
+-- Generation Time: May 12, 2023 at 06:47 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -87,16 +87,17 @@ CREATE TABLE `users` (
   `First Name` varchar(255) NOT NULL,
   `Last Name` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
-  `Password` varchar(255) NOT NULL
+  `Password` varchar(255) NOT NULL,
+  `is_admin` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`ID`, `First Name`, `Last Name`, `Email`, `Password`) VALUES
-(1, 'Admin', 'Test', 'admin@test.com', 'admin123'),
-(2, 'Mostafa', 'Mohammed', 'mostafa@gmail.com', '1234');
+INSERT INTO `users` (`ID`, `First Name`, `Last Name`, `Email`, `Password`, `is_admin`) VALUES
+(1, 'Admin', 'Test', 'admin@test.com', 'admin123', 1),
+(2, 'Mostafa', 'Mohammed', 'mostafa@gmail.com', '1234', 0);
 
 --
 -- Indexes for dumped tables
