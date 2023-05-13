@@ -13,137 +13,78 @@ body{
     margin: unset;
 }
 
-/* Start Header  */
-.header{
+.header {
     padding: auto;
-}
-.all_page {
-    position: relative;
-}
-div.contanier_header{
+  }
+  
+  div.contanier_header {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    background-color: #2D2D34;
+    background-color: #2d2d34;
     height: 100px;
-}
-.all_page .header .contanier_header .links{
-    position: relative;
-}
-.all_page .header .contanier_header .links:hover .icon span:nth-child(2){
-    width: 100%;
-}
-.all_page .header .contanier_header .links .icon{
-    width: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 40px 0;
-
-}
-.all_page .header .contanier_header .links .icon span{
-    background-color: #FFCA42;
-    margin-bottom: 5px;         /* So that they don't stick together for span*/
-}
-.all_page .header .contanier_header .links .icon span:first-child{
-    height: 5px;
-    width: 100%;
-}
-.all_page .header .contanier_header .links .icon span:nth-child(2){
-    height: 5px;
-    width: 60%;
-    transition: .3s;
-}
-.all_page .header .contanier_header .links .icon span:last-child{
-    height: 5px;
-    width: 100%;
-}
-.all_page .header .contanier_header .links ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #FFCA42;
-    position: absolute;         /*So we can control them*/
-    left: 0;
-    min-width: 200px;
-    top: calc(100% + 15px);
-    display: none;
-    z-index: 1;
-}
-
-.all_page .header .contanier_header .links ul:before{
-    content: "";
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent transparent #FFCA42 transparent;
-    position: absolute;
-    left: 5px;                 /*5px => span width 30px , ul::before border 20px + 5px right +5px left */
-    top: -20px;                 /* ul size 20px */
-}
-.all_page .header .contanier_header .links:hover ul{
-    display: block;
-}
-.all_page .header .contanier_header .links ul li a {
-    display: block;
-    padding :20px;
-    text-decoration: none;
-    color: #2D2D34;
-    transition: .3s;
-}
-.all_page .header .contanier_header .links ul li a:hover{
-    padding-left: 40px;
-}
-.all_page .header .contanier_header .links ul li:not(:last-child) a {
-    border-bottom: 1px solid #2D2D34;
-}
-div.all_page .header .contanier_header .logo_header span{
+  }
+  
+  div.all_page .header .contanier_header .logo_header span {
     font-size: 28px;
-    font-family: 'Inter', sans-serif;
-    color: #F6F8FC;
+    font-family: "Inter", sans-serif;
+    color: #f6f8fc;
     font-weight: bold;
-}
-div.all_page .header .contanier_header .nav ul {
+  }
+  
+  div.all_page .header .contanier_header .nav ul {
     display: flex;
-    justify-content: space-between;  /*to separeat between the Elements */
+    justify-content: space-between;
+    /*to separeat between the Elements */
     align-items: center;
-}
-div.all_page .header .contanier_header .nav ul li{
+  }
+  
+  div.all_page .header .contanier_header .nav ul li {
     padding: 0 30px;
     list-style: none;
-}
-div.all_page .header .contanier_header .nav ul li a{
+  }
+  
+  div.all_page .header .contanier_header .nav ul li a {
     text-decoration: none;
-    color: #F6F8FC;
-}
-.pragraph{
-    background-color: #2D2D34;
+    color: #f6f8fc;
+  }
+  
+  .pragraph {
+    background-color: #2d2d34;
     text-align: center;
-}
-.pragraph img{
+  }
+
+  .pragraph img{
     width: 30px;
     height: 30px;
 }
-.pragraph h2{
-    padding:0;
+  
+  .pragraph h2 {
+    padding: 0;
     margin: 0;
     color: white;
-    font-family: 'Cardo', serif;
+    font-family: "Cardo", serif;
     font-size: 30px;
-}
-.pragraph span{
+  }
+  
+  .pragraph span {
     display: inline-flex;
     width: 150px;
-    background-color: #FFCA42;
+    background-color: #ffca42;
     height: 3px;
-}
-.pragraph .line{
+  }
+  
+  .pragraph .line {
     margin: 0 0 10px;
-}
-.pragraph p{
+  }
+  
+  .pragraph p {
     padding: 0 0 40px;
     margin: 0;
-    color: #B4C7E7;
-}
-/* End Header  */
+    color: #b4c7e7;
+  }
+  
+  /* end of header */
 
 /* Start mid  */
 div.all_page .mid{
@@ -255,99 +196,113 @@ form button a{
 /* End mid  */
 
 /* Start Footer  */
-div.footer{
-    background-color: #2D2D34;
+div.footer {
+    background-color: #2d2d34;
     position: relative;
-
-}
-div.contanier_footer{
+    height: 280px;
+  }
+  
+  div.contanier_footer {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
-}
-.contanier_footer .logo_footer {
+  }
+  
+  .contanier_footer .logo_footer {
     position: relative;
-}
-span.website-name{
-    color: #F6F8FC;
+  }
+  
+  span.website-name {
+    color: #f6f8fc;
     font-size: 25px;
-    padding:0 0 0 7px;
-}
-.contanier_footer .logo_footer .media_icon{
+    padding: 0 0 0 7px;
+  }
+  
+  .contanier_footer .logo_footer .media_icon {
     position: absolute;
     width: 200px;
-}
-.facebook,
-.twitter,
-.linkedin,
-.git{
+  }
+  
+  .facebook,
+  .twitter,
+  .linkedin,
+  .git {
     padding: 10px;
-}
-.list_one ul li{
+  }
+  
+  .list_one ul li {
     list-style: none;
     padding: 5px;
-}
-.list_one ul li span.circle{
+  }
+  
+  .list_one ul li span.circle {
     width: 10px;
     height: 10px;
     display: flex;
     padding: 5px;
-
-}
-.list_one ul li span.circle span{
+  }
+  
+  .list_one ul li span.circle span {
     border-style: solid;
     border-radius: 50%;
     margin-left: 5px;
     padding: 1px;
     border-width: 3px;
-    border-color: #FFCA42;    
-}
-.list_one ul li  a{
+    border-color: #ffca42;
+  }
+  
+  .list_one ul li a {
     margin: -8px 10px 0;
     text-decoration: none;
-    color: #B4C7E7;
-
-}
-.list_two ul li{
+    color: #b4c7e7;
+  }
+  
+  .list_two ul li {
     list-style: none;
     padding: 5px;
-}
-.list_two ul li span.circle{
+  }
+  
+  .list_two ul li span.circle {
     width: 10px;
     height: 10px;
     display: flex;
     padding: 5px;
-
-}
-.list_two ul li span.circle span{
+  }
+  
+  .list_two ul li span.circle span {
     border-style: solid;
     border-radius: 50%;
     margin-left: 5px;
     padding: 1px;
     border-width: 3px;
-    border-color: #FFCA42;    
-}
-.footer4{
-    color: #7B8FA1;
+    border-color: #ffca42;
+  }
+  
+  .footer4 {
+    color: #7b8fa1;
     font-size: 15px;
-}
-.footer4 p{
+  }
+  
+  .footer4 p {
     margin: 0;
-}
-.list_two ul li  a{
+  }
+  
+  .list_two ul li a {
     margin: -8px 10px 0;
     text-decoration: none;
-    color: #B4C7E7;
-
-}
-span.line_footer hr {
+    color: #b4c7e7;
+  }
+  
+  span.line_footer hr {
     width: 60%;
-    background-color: #FFCA42;
+    background-color: #ffca42;
     border: none;
     height: 2px;
-}
-footer{
+  }
+  
+  footer {
     text-align: center;
-    color: #B4C7E7;
-}
-/* End Footer  */
+    color: #b4c7e7;
+  }
+  
+  /* End Footer  */

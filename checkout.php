@@ -38,7 +38,14 @@
     if(!isset($book_id)) {
         header("Location: store.php");
         exit();
-    } 
+    }
+    
+    session_start();
+    if (!isset($_SESSION['email'])) {
+        // User is not logged in or not an admin, redirect to login page
+        header("Location: sign in.php");
+        exit();
+    }
 
     $read = mysqli_query($conn, "SELECT * FROM booktable WHERE ID = '$book_id'");
     $row = mysqli_fetch_array($read);
@@ -53,10 +60,9 @@
                         </div>
                         <div class="nav">
                             <ul>
-                                <li><a href="#home"> Home </a></li>
-                                <li><a href="#home"> Pages </a></li>
-                                <li><a href="#home"> Store </a></li>
-                                <li><a href="#home"> Contact </a></li>
+                                <li><a href="home.php"> Home </a></li>
+                                <li><a href="store.php"> Store </a></li>
+                                <li><a href="admin.php"> Admin </a></li>
                               </ul>
                         </div>
                     </div>
@@ -66,7 +72,7 @@
                         <h2>Checkout</h2>
                         <span></span>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        <p>Please enter your information here</p>
                     </div>
                 </div>
                 <!-- End Header -->
@@ -97,12 +103,12 @@
                           $state = $_POST["state"];
                           $post_code = $_POST["post_code"];
                           $ph_num = $_POST["ph_num"];
-                          $email = $_POST["email"];
+                          $email = $_SESSION['email'];
                           $sql = "INSERT INTO orders (`Book ID`, `First Name`, `Last Name`, `Address Line 1`, `Address Line 2`, `Country`, `City`, `State`, `Post Code`, `Phone Number`, `Email`) 
                           VALUES ($book_id, '$fname', '$lname', '$address_1', '$address_2', '$country', '$city', '$state', '$post_code', '$ph_num', '$email')";
 
                           mysqli_query($conn, $sql);
-                          echo '<script>alert("Welcome to Geeks for Geeks")</script>';
+                          echo '<script>alert("Order Confirmed!")</script>';
                         }
                         ?>
                         <form method="post" class="address-form">
@@ -157,8 +163,6 @@
                             <div class="tel_info">
                                 <label for="ph_num"> Phone Number</label>
                                 <input type="tel" name="ph_num" required placeholder=" 01012345678">
-                                <label for="email"> Email </label>
-                                <input type="email" name="email" required placeholder=" example@example.com">
                             </div>
                             <div class="button">
                                 <button type="submit" name="continue"> Continue </button>
@@ -191,50 +195,24 @@
                     </div>
                 </div>
                 <div class="list_one">
-                    <p>Explore</p>
+                    <p style="color:white;">Explore</p>
                     <ul>
                         <li><span class="circle"><span></span> <span></span> <span></span>
-                            <a href="#home">Home</a>
+                            <a href="home.php">Home</a>
                         </li>
                         <li><span class="circle"><span></span> <span></span> <span></span>
-                            <a href="#home">Services</a>
+                            <a href="store.php">Store</a>
                         </li>
                         <li><span class="circle"><span></span> <span></span> <span></span>
-                            <a href="#home">About</a>
-                        </li>
-                        <li><span class="circle"><span></span> <span></span> <span></span>
-                            <a href="#home">Blog</a>
-                        </li>
-                        <li><span class="circle"><span></span> <span></span> <span></span>
-                            <a href="#home">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="list_two">
-                    <p>Utility Pages</p>
-                    <ul>
-                        <li><span class="circle"><span></span> <span></span> <span></span>
-                            <a href="#home">join</a>
-                        </li>
-                        <li><span class="circle"><span></span> <span></span> <span></span>
-                            <a href="#home">404</a>
-                        </li>
-                        <li><span class="circle"><span></span> <span></span> <span></span>
-                            <a href="#home">Home</a>
-                        </li>
-                        <li><span class="circle"><span></span> <span></span> <span></span>
-                            <a href="#home">Home</a>
-                        </li>
-                        <li><span class="circle"><span></span> <span></span> <span></span>
-                            <a href="#home"> Changing </a>
+                            <a href="admin.php">Admin</a>
                         </li>
                     </ul>
                 </div>
                 <div class="footer4">
                     <h3> Keep in Touch</h3>
                     <p> Address: address</p><br>
-                    <p> Mail:  support@doctors.com</p><br>
-                    <p> Phone:  (+22)123-4567-900</p>
+                    <p> Mail:  support@booktopia.com</p><br>
+                    <p> Phone:  (+20)123-4567-900</p>
                 </div>
             </div>
             <span class="line_footer"><hr></span>

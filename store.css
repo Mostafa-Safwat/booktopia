@@ -1,14 +1,15 @@
 body,
 html {
+  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f6f8fc;
   height: 100%;
   margin: unset;
 }
 
-.logo {
-  text-decoration: none;
-  padding-left: 10px;
-  color: #f6f8fc;
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(Fonts/Roboto-Regular.ttf);
 }
 
 .picture {
@@ -25,61 +26,73 @@ html {
   background-size: cover;
 }
 
-@font-face {
-  font-family: GrapeNuts;
-  src: url(Fonts/GrapeNuts-Regular.ttf);
+.header {
+  padding: auto;
 }
 
-@font-face {
-  font-family: Roboto-Regular;
-  src: url(Fonts/Roboto-Regular.ttf);
-}
-
-/* Reset default list styles */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Style navbar */
-.navMenu {
-  height: 50px;
-}
-
-/* Style navbar links */
-.navMenu ul {
+div.contanier_header {
   display: flex;
-  /* justify-content: end; */
+  justify-content: space-between;
   align-items: center;
-
-  font-family: Roboto-Regular;
-  font-size: 20px;
-
-  padding-right: 10%;
-  padding-top: 1%;
-
-  /* for the future versions */
   background-color: #2d2d34;
-  padding-bottom: 1%;
+  height: 100px;
 }
 
-.navMenu .nav-item {
+div.all_page .header .contanier_header .logo_header span {
+  font-size: 28px;
+  font-family: "Inter", sans-serif;
   color: #f6f8fc;
+  font-weight: bold;
+}
+
+div.all_page .header .contanier_header .nav ul {
+  display: flex;
+  justify-content: space-between;
+  /*to separeat between the Elements */
+  align-items: center;
+}
+
+div.all_page .header .contanier_header .nav ul li {
+  padding: 0 30px;
+  list-style: none;
+}
+
+div.all_page .header .contanier_header .nav ul li a {
   text-decoration: none;
-  padding: 40px;
-}
-
-.navMenu .nav-item:hover {
-  color: #ffca42;
-}
-
-.booktopia {
-  padding-left: 10px;
-  padding-right: 45%;
   color: #f6f8fc;
-  font-size: 40px;
 }
+
+.pragraph {
+  background-color: #2d2d34;
+  text-align: center;
+}
+
+.pragraph h2 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "Cardo", serif;
+  font-size: 30px;
+}
+
+.pragraph span {
+  display: inline-flex;
+  width: 150px;
+  background-color: #ffca42;
+  height: 3px;
+}
+
+.pragraph .line {
+  margin: 0 0 10px;
+}
+
+.pragraph p {
+  padding: 0 0 40px;
+  margin: 0;
+  color: #b4c7e7;
+}
+
+/* end of header */
 
 .container {
   display: grid;
@@ -116,16 +129,6 @@ ul {
   display: flex;
   border-width: fit-content;
   border: 30px solid #e8eaef;
-}
-
-.links {
-  font-family: Roboto-Regular;
-  text-decoration: none;
-  color: #2d2d34;
-}
-
-.links:hover {
-  color: #ffca42;
 }
 
 .pad {
@@ -167,99 +170,113 @@ ul {
   font-weight: bold;
 }
 /* Start Footer  */
-div.footer{
-  background-color: #2D2D34;
+div.footer {
+  background-color: #2d2d34;
   position: relative;
-
+  height: 280px;
 }
-div.contanier_footer{
+
+div.contanier_footer {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
 }
+
 .contanier_footer .logo_footer {
   position: relative;
 }
-span.website-name{
-  color: #F6F8FC;
+
+span.website-name {
+  color: #f6f8fc;
   font-size: 25px;
-  padding:0 0 0 7px;
+  padding: 0 0 0 7px;
 }
-.contanier_footer .logo_footer .media_icon{
+
+.contanier_footer .logo_footer .media_icon {
   position: absolute;
   width: 200px;
 }
+
 .facebook,
 .twitter,
 .linkedin,
-.git{
+.git {
   padding: 10px;
 }
-.list_one ul li{
+
+.list_one ul li {
   list-style: none;
   padding: 5px;
 }
-.list_one ul li span.circle{
+
+.list_one ul li span.circle {
   width: 10px;
   height: 10px;
   display: flex;
   padding: 5px;
-
 }
-.list_one ul li span.circle span{
+
+.list_one ul li span.circle span {
   border-style: solid;
   border-radius: 50%;
   margin-left: 5px;
   padding: 1px;
   border-width: 3px;
-  border-color: #FFCA42;    
+  border-color: #ffca42;
 }
-.list_one ul li  a{
+
+.list_one ul li a {
   margin: -8px 10px 0;
   text-decoration: none;
-  color: #B4C7E7;
-
+  color: #b4c7e7;
 }
-.list_two ul li{
+
+.list_two ul li {
   list-style: none;
   padding: 5px;
 }
-.list_two ul li span.circle{
+
+.list_two ul li span.circle {
   width: 10px;
   height: 10px;
   display: flex;
   padding: 5px;
-
 }
-.list_two ul li span.circle span{
+
+.list_two ul li span.circle span {
   border-style: solid;
   border-radius: 50%;
   margin-left: 5px;
   padding: 1px;
   border-width: 3px;
-  border-color: #FFCA42;    
+  border-color: #ffca42;
 }
-.footer4{
-  color: #7B8FA1;
+
+.footer4 {
+  color: #7b8fa1;
   font-size: 15px;
 }
-.footer4 p{
+
+.footer4 p {
   margin: 0;
 }
-.list_two ul li  a{
+
+.list_two ul li a {
   margin: -8px 10px 0;
   text-decoration: none;
-  color: #B4C7E7;
-
+  color: #b4c7e7;
 }
+
 span.line_footer hr {
   width: 60%;
-  background-color: #FFCA42;
+  background-color: #ffca42;
   border: none;
   height: 2px;
 }
-footer{
+
+footer {
   text-align: center;
-  color: #B4C7E7;
+  color: #b4c7e7;
 }
+
 /* End Footer  */

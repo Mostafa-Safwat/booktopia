@@ -3,6 +3,7 @@ body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
   width: 100%;
+  margin: unset;
 }
 
 @font-face {
@@ -20,88 +21,6 @@ div.contanier_header {
   align-items: center;
   background-color: #2d2d34;
   height: 100px;
-}
-
-.all_page .header .contanier_header .links {
-  position: relative;
-}
-
-.all_page .header .contanier_header .links:hover .icon span:nth-child(2) {
-  width: 100%;
-}
-
-.all_page .header .contanier_header .links .icon {
-  width: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 40px 0;
-}
-
-.all_page .header .contanier_header .links .icon span {
-  background-color: #ffca42;
-  margin-bottom: 5px;
-  /* So that they don't stick together for span*/
-}
-
-.all_page .header .contanier_header .links .icon span:first-child {
-  height: 5px;
-  width: 100%;
-}
-
-.all_page .header .contanier_header .links .icon span:nth-child(2) {
-  height: 5px;
-  width: 60%;
-  transition: 0.3s;
-}
-
-.all_page .header .contanier_header .links .icon span:last-child {
-  height: 5px;
-  width: 100%;
-}
-
-.all_page .header .contanier_header .links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #ffca42;
-  position: absolute;
-  /*So we can control them*/
-  left: 40px;
-  min-width: 200px;
-  top: calc(100% + 15px);
-  display: none;
-}
-
-.all_page .header .contanier_header .links ul:before {
-  content: "";
-  border-width: 10px;
-  border-style: solid;
-  border-color: transparent transparent #ffca42 transparent;
-  position: absolute;
-  left: 5px;
-  /*5px => span width 30px , ul::before border 20px + 5px right +5px left */
-  top: -20px;
-  /* ul size 20px */
-}
-
-.all_page .header .contanier_header .links:hover ul {
-  display: block;
-}
-
-.all_page .header .contanier_header .links ul li a {
-  display: block;
-  padding: 20px;
-  text-decoration: none;
-  color: #2d2d34;
-  transition: 0.3s;
-}
-
-.all_page .header .contanier_header .links ul li a:hover {
-  padding-left: 40px;
-}
-
-.all_page .header .contanier_header .links ul li:not(:last-child) a {
-  border-bottom: 1px solid #2d2d34;
 }
 
 div.all_page .header .contanier_header .logo_header span {
@@ -343,6 +262,7 @@ tr:hover {
 div.footer {
   background-color: #2d2d34;
   position: relative;
+  height: 280px;
 }
 
 div.contanier_footer {

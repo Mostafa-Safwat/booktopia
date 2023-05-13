@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" lang="en">
   <head>
-    <link rel="stylesheet" href="store.css" />
-    <title>Store | Booktopia</title>
+    <link rel="stylesheet" href="home.css" />
+    <title>Home | Booktopia</title>
     <!--Logo title-->
     <link rel="icon" type="image/jpg" href="Images/Vector.png">
 
@@ -13,9 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"       rel="stylesheet">
   </head>
+
   <body>
     <div class="picture">
-    <div class="all_page">
+      <div class="quote">
+        “If you don’t like to read, you haven’t found the right book.”
+      </div>
+      <div class="all_page">
     <div class="header">
       <div class="contanier_header">
         <div class="logo_header">
@@ -32,49 +36,63 @@
       </div>
     </div>
   </div>
-    </div>
-    <?php
-    //to connect to database server
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $db = "book-data";
-
-    $conn = mysqli_connect($host, $user, $pass, $db);
-
-    $read = mysqli_query($conn, "SELECT * FROM booktable");
-    ?>
-  <?php 
-  $count = 0;
-  while ($row = mysqli_fetch_array($read)) {
-    if ($count % 3 == 0) {
-      echo '<div class="container">';
-    }
-  ?>
-    <div class="books">
-      <div>
-        <div>
-          <img class="books border" src="<?php echo $row['Image']; ?>" />
-          <div class="pad"><?php echo $row['Name']; ?></div>
-        </div>
-        <div class="subtext"><?php echo $row['Description']; ?></div>
-        <a class="btn" href="checkout.php?book_id=<?php echo $row['ID']; ?>"><button class="btn" type="button">Buy Now</button></a>
-        <div class="price">$<?php echo $row['Price']; ?></div>
+      <div class="between">
+        <a class="links" href="sign up.php"> <button class="btn" type="button">Sign Up</button> </a>
+        <a class="links" href="sign in.php"> <button class="btn" type="button">Sign In</button> </a>
       </div>
     </div>
-  <?php
-    $count++;
-    if ($count % 3 == 0) {
-      echo '</div>';
-    }
-  }
-  // If there are any remaining books, close the container div
-  if ($count % 3 != 0) {
-    echo '</div>';
-  }
-  ?>
-        <!-- start footer -->
-        <div class="footer"> 
+    <!-- Start of review -->
+    <div class="reviewBox">
+      <div class="MoreText">
+        Check out the reviews of multiple users 
+        <br /> <br />
+        Over 4.4 million users with an average score of <br /> (4.5/5) <img src="Images/Reviews2.png" width="15%" />
+      </div>
+      <!------------ Mr Potato ------------>
+      <div class="reviewContainer">
+        <img class="reviewProfile" src="Images/MrPotato.jpg" />
+        <div class="reviewName">
+          Mr Potato
+        </div>
+          <div class="reviewText">
+            “You saved our lives!
+            And WE are eternally grateful!”
+          </div>
+      </div>
+      <!------------ Kartoffel ------------>
+      <div class="reviewContainer2">
+        <img class="reviewProfile2" src="Images/Kartoffel.png" />
+        <div class="reviewName2">
+          Kartoffel
+        </div>
+          <div class="reviewText2">
+            “أتألم ولا اتكلم”
+          </div>
+      </div>
+      <!------------ Jagaimo ------------>
+      <div class="reviewContainer3">
+        <img class="reviewProfile3" src="Images/Jagaimo.png" />
+        <div class="reviewName3">
+          Jagaimo
+        </div>
+          <div class="reviewText3">
+            “One of the best book stores out there!”
+          </div>
+      </div>
+    </div>
+    <!-- End of review -->
+
+
+    <div class = "endBox">
+      <div class="endText">
+      What are you waiting for?
+      <br />
+      Check out our <a href="store.php"> <button class="endBtn" type="button">Store</button> </a>
+      </div>
+      <img class="endPic" src="Images/end.png" />
+    </div>
+       <!-- start footer -->
+       <div class="footer"> 
             <div class="contanier_footer">
                 <div class="logo_footer">
                     <img src="Images/Vector.png" alt="name website" width="30px" height="30px">
