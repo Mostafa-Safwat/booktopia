@@ -33,8 +33,8 @@ To run the project locally, ensure you have the necessary dependencies installed
 For detailed installation instructions and deployment guidelines, please refer to the [Installation Guide](link-to-installation-guide).
 
 ## Contributors
-- Mostafa Safwat
-- Abdelrahman Hassan
+- Mostafa Safwat   https://github.com/Mostafa-Safwat
+- Abdelrahman Hassan   https://github.com/Abdalrahman-H
 
 ## License
 This project is licensed under the [MIT License](link-to-license).
